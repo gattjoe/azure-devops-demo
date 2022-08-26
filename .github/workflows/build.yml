@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: "npm"
-          working-directory: buildAndReleaseTask
+          cache-dependency-path: buildAndReleaseTask/package-lock.json
 
       - name: Install packages
         run: npm ci
